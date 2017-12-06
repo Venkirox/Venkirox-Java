@@ -153,6 +153,7 @@ public class JMusicBot {
                     .buildAsync();
         } catch (LoginException | IllegalArgumentException | RateLimitedException ex) {
             SimpleLog.getLog("Login").fatal(ex);
+            client.login(process.env.BOT_TOKEN);
         }
     }
 }
